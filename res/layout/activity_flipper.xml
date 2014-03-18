@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/flipper_parent"
+    	android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/content_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        style="@style/content_description"
+        android:visibility="invisible"
+        />
+    
+    
+	<ViewFlipper 
+	    android:id="@+id/view_flipper"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" 
+	    >
+	
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        style="@style/flipper_textview"
+	        />
+	
+	</ViewFlipper>
+</RelativeLayout>
