@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+	<Button
+        android:id="@+id/btn_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_numbers"
+        android:layout_alignParentTop="true"
+        />
+	    
+	<Button
+        android:id="@+id/btn_letters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_letters"
+        android:layout_below="@id/btn_numbers"
+        />
+	
+	<Button
+        android:id="@+id/btn_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_colors"
+        android:layout_below="@id/btn_letters"
+        />
+	
+
+</RelativeLayout>
