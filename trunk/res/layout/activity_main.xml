@@ -11,29 +11,65 @@
          TextureView, etc.
     -->
 
-	<Button
-        android:id="@+id/btn_numbers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_numbers"
-        android:layout_alignParentTop="true"
-        />
-	    
-	<Button
-        android:id="@+id/btn_letters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_letters"
-        android:layout_below="@id/btn_numbers"
-        />
+	<ImageButton
+	    android:id="@+id/btn_numbers"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/icon_123"
+	    android:contentDescription="@string/btn_numbers"
+	    android:text="@string/btn_numbers" />
 	
-	<Button
+	<TextView
+	    style="@style/menu_textview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@id/btn_numbers"
+	    android:layout_centerVertical="false"
+	    android:layout_toRightOf="@id/btn_numbers"
+	    android:text="@string/btn_numbers"
+	    android:typeface="monospace" />
+	
+	<ImageButton
+	    android:id="@+id/btn_letters"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@id/btn_numbers"
+	    android:background="@drawable/icon_abc"
+	    android:contentDescription="@string/btn_letters"
+	    android:text="@string/btn_letters" />
+	
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@id/btn_letters"
+	    android:layout_centerVertical="false"
+	    android:layout_toLeftOf="@id/btn_letters"
+	    android:text="@string/btn_letters" 
+	    style="@style/menu_textview"
+	    android:typeface="monospace"
+	    />
+	
+	<ImageButton
         android:id="@+id/btn_colors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_colors"
         android:layout_below="@id/btn_letters"
+        android:background="@drawable/icon_colors"
+	    android:contentDescription="@string/btn_colors"
         />
 	
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@id/btn_colors"
+	    android:layout_centerVertical="false"
+	    android:layout_toRightOf="@id/btn_colors"
+	    android:text="@string/btn_colors" 
+	    style="@style/menu_textview"
+	    android:typeface="monospace"
+	    />
 
 </RelativeLayout>
