@@ -36,7 +36,7 @@
     <style name="ButtonBarButton" />
     
     <style name="flipper_textview">
-        <item name="android:textSize">300sp</item>
+        <item name="android:textSize">200sp</item>
         <item name="android:textStyle">bold</item>
 <!--         <item name="android:textColor">@color/black_overlay</item> -->
     </style>
