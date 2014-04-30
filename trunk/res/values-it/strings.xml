@@ -16,5 +16,6 @@
 	<string name="label_green">Verde</string>
 	<string name="label_yellow">Giallo</string>
 	<string name="label_blue">Blu</string>
+	<string name="label_purple">Viola</string>
 	
 </resources>

@@ -31,7 +31,7 @@ public class SettingsActivity extends PreferenceActivity {
 	 * as a master/detail two-pane view on tablets. When true, a single pane is
 	 * shown on tablets.
 	 */
-	private static final boolean ALWAYS_SIMPLE_PREFS = false;
+	private static final boolean ALWAYS_SIMPLE_PREFS = true;
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
@@ -54,14 +54,17 @@ public class SettingsActivity extends PreferenceActivity {
 		// use the older PreferenceActivity APIs.
 
 		// Add 'general' preferences.
+		
 		addPreferencesFromResource(R.xml.pref_colors);
-
+		addPreferencesFromResource(R.xml.pref_numbers);
+		addPreferencesFromResource(R.xml.pref_available_colors);
 
 		// Bind the summaries of EditText/List/Dialog/Ringtone preferences to
 		// their values. When their values change, their summaries are updated
 		// to reflect the new value, per the Android Design guidelines.
 		bindPreferenceSummaryToValue(findPreference("background_color"));
 		bindPreferenceSummaryToValue(findPreference("content_color"));
+		bindPreferenceSummaryToValue(findPreference("max_number"));
 	}
 
 	/** {@inheritDoc} */
@@ -128,6 +131,8 @@ public class SettingsActivity extends PreferenceActivity {
 			return true;
 		}
 	};
+	
+	
 
 	/**
 	 * Binds a preference's summary to its value. More specifically, when the
@@ -151,6 +156,7 @@ public class SettingsActivity extends PreferenceActivity {
 						preference.getContext()).getString(preference.getKey(),
 						""));
 	}
+	
 
 	/**
 	 * This fragment shows general preferences only. It is used when the
@@ -162,6 +168,8 @@ public class SettingsActivity extends PreferenceActivity {
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			addPreferencesFromResource(R.xml.pref_colors);
+			addPreferencesFromResource(R.xml.pref_numbers);
+			addPreferencesFromResource(R.xml.pref_available_colors);
 
 			// Bind the summaries of EditText/List/Dialog/Ringtone preferences
 			// to their values. When their values change, their summaries are
@@ -169,6 +177,7 @@ public class SettingsActivity extends PreferenceActivity {
 			// guidelines.
 			bindPreferenceSummaryToValue(findPreference("background_color"));
 			bindPreferenceSummaryToValue(findPreference("content_color"));
+			bindPreferenceSummaryToValue(findPreference("max_number"));
 		}
 	}
 

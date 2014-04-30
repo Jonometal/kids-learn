@@ -1,0 +1,40 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory 
+        android:title="@string/pref_header_available_colors"
+        >
+    
+    <CheckBoxPreference 
+        android:key="available_color_red"
+        android:title="@string/label_red"
+        android:defaultValue="true"
+        />
+    
+    <CheckBoxPreference 
+        android:key="available_color_blue"
+        android:title="@string/label_blue"
+        android:defaultValue="true"
+        />
+    
+    <CheckBoxPreference 
+        android:key="available_color_yellow"
+        android:title="@string/label_yellow"
+        android:defaultValue="true"
+        />
+    
+    <CheckBoxPreference 
+        android:key="available_color_green"
+        android:title="@string/label_green"
+        android:defaultValue="true"
+        />
+    
+    <CheckBoxPreference 
+        android:key="available_color_purple"
+        android:title="@string/label_purple"
+        android:defaultValue="false"
+        
+        />
+    
+</PreferenceCategory>
+    
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory 
+        android:title="@string/pref_header_numbers"
+        >
+    
+	    <EditTextPreference 
+	        android:defaultValue="10"
+	        android:key="max_number"
+	        android:title="@string/pref_title_max_number"
+	        android:dialogTitle="@string/pref_title_max_number"
+	        android:inputType="number"
+	       />
+    
+    </PreferenceCategory>
+
+</PreferenceScreen>
