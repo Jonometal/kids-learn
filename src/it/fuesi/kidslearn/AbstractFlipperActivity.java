@@ -78,6 +78,10 @@ public abstract class AbstractFlipperActivity extends AbstractFullScreenActivity
 		
 	}
 	
+	protected SharedPreferences getSettings(){
+		return mPrefs;
+	}
+	
 	private int getColor(String prefKey, String defaultColor){
 		final String colorString = mPrefs.getString(prefKey, defaultColor);
 		
@@ -166,14 +170,18 @@ public abstract class AbstractFlipperActivity extends AbstractFullScreenActivity
 	}
 	
 	public void previousItem() {
-		if(mCount <= min) return;
+		if(mCount <= min) {
+			mFlipper.setDisplayedChild(max-1);
+			mCount = max;
+			return;
+		}
 		
 		mFlipper.setInAnimation(inFromLeftAnimation());
 		mFlipper.setOutAnimation(outToRightAnimation());
 
-		mFlipper.showPrevious();
-		
 		mCount--;
+
+		mFlipper.showPrevious();
 		
 	}
 

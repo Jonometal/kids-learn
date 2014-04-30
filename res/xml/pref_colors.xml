@@ -1,5 +1,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <PreferenceCategory 
+        android:title="@string/pref_header_ui_colors"
+        >
+    
     <ListPreference
         android:defaultValue="white"
         android:entries="@array/pref_colors_list_titles"
@@ -18,5 +22,6 @@
         android:positiveButtonText="@null"
         android:title="@string/pref_title_content_color" />
     
+   </PreferenceCategory>
 
 </PreferenceScreen>

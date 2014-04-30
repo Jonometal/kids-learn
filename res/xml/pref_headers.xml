@@ -4,4 +4,14 @@
         android:fragment="it.fuesi.kidslearn.SettingsActivity$GeneralPreferenceFragment"
         android:title="@string/pref_header_colors" />
 
+    <header
+        android:fragment="it.fuesi.kidslearn.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_numbers" />
+    
+    <header
+        android:fragment="it.fuesi.kidslearn.SettingsActivity$GeneralPreferenceFragment"
+        android:title="@string/pref_header_available_colors" 
+        />
+    
+    
 </preference-headers>

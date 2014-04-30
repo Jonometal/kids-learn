@@ -9,11 +9,10 @@ import android.widget.TextView;
 
 public class NumbersActivity extends AbstractFlipperActivity {
 	
-	private static final String[] NUMBERS = fillNumbers();
-	private static final List<FlipperItem> items = FlipperItem.arrayFactory(NUMBERS);
+	private static List<FlipperItem> items = null;
 	
-	private static final String[] fillNumbers(){
-		final String[] numbers = new String[10];
+	private final String[] fillNumbers(){
+		final String[] numbers = new String[getMaxNumber()];
 		for(int i=0; i<numbers.length; i++)
 			numbers[i] = String.valueOf((i+1));
 		return numbers;
@@ -21,6 +20,9 @@ public class NumbersActivity extends AbstractFlipperActivity {
 	
 	@Override
 	protected List<FlipperItem> getItems() {
+		if(items == null)
+			items = FlipperItem.arrayFactory(fillNumbers());
+		
 		return items;
 	}
 		
@@ -30,6 +32,10 @@ public class NumbersActivity extends AbstractFlipperActivity {
 		final TextView text = (TextView)v;
 		text.setTextColor(contentColor);
 		container.setBackgroundColor(backgroundColor);
+	}
+	
+	private int getMaxNumber(){
+		return Integer.parseInt(getSettings().getString("max_number", "10"));
 	}
 	
 }

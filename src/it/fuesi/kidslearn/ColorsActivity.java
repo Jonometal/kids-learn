@@ -2,6 +2,7 @@ package it.fuesi.kidslearn;
 
 import it.fuesi.kidslearn.model.FlipperItem;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import android.graphics.drawable.ShapeDrawable;
@@ -14,24 +15,44 @@ import android.widget.ViewFlipper;
 
 public class ColorsActivity extends AbstractFlipperActivity {
 
-	private static int[] COLORS = {
+	private static String[] COLORS = {
+		"red",
+		"blue",
+		"yellow",
+		"green",
+		"purple"
+	};
+	
+	private static int[] COLORS_ID = {
 		R.color.red,
-		R.color.green,
+		R.color.blue,
 		R.color.yellow,
-		R.color.blue
+		R.color.green,
+		R.color.purple
 	};
 	
 	private static int[] COLORS_LABELS = {
 		R.string.label_red,
-		R.string.label_green,
+		R.string.label_blue,
 		R.string.label_yellow,
-		R.string.label_blue
+		R.string.label_green,
+		R.string.label_purple
 	};
-	
-	private static List<FlipperItem> items = FlipperItem.arrayFactory(COLORS, COLORS_LABELS);
 	
 	@Override
 	protected List<FlipperItem> getItems() {
+		
+		final List<FlipperItem> items = new LinkedList<FlipperItem>();
+		int i = 0;
+		for(String color : COLORS){
+			if(getSettings().getBoolean("available_color_" + color, false)){
+				FlipperItem item = new FlipperItem(COLORS_ID[i]);
+				item.setLabel(COLORS_LABELS[i]);
+				items.add(item);
+			}
+			i++;
+		}
+		
 		return items;
 	}
 	
