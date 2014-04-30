@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_colors">Colors</string>
+    <string name="pref_header_numbers">Numbers</string>
+    <string name="pref_header_available_colors">Available colors</string>
+    <string name="pref_header_ui_colors">User interface colors</string>
+    
+    <string name="pref_title_background_color">Background color</string>
+    <string name="pref_title_content_color">Content color</string>
+    <string name="pref_title_max_number">Max number</string>
+    
+    <string-array name="pref_colors_list_titles">
+        <item>White</item>
+        <item>Black</item>
+        <item>Grey</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Blue</item>
+    </string-array>
+    <string-array name="pref_colors_list_values">
+        <item>white</item>
+        <item>black</item>
+        <item>grey</item>
+        <item>yellow</item>
+        <item>green</item>
+        <item>red</item>
+        <item>blue</item>
+    </string-array>
+    
+   
+   
+
+</resources>
