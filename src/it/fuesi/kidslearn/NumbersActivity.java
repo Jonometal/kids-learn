@@ -20,10 +20,7 @@ public class NumbersActivity extends AbstractFlipperActivity {
 	
 	@Override
 	protected List<FlipperItem> getItems() {
-		if(items == null)
-			items = FlipperItem.arrayFactory(fillNumbers());
-		
-		return items;
+		return FlipperItem.arrayFactory(fillNumbers());
 	}
 		
 	
