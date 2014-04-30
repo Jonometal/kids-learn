@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidsLearn</string>
+   
+    <string name="title_activity_numbers">Numeri</string>
+    <string name="title_activity_letters">Lettere</string>
+    <string name="title_activity_colors">Colori</string>
+    
+    <string name="btn_numbers">Numeri</string>
+	<string name="btn_letters">Lettere</string>
+	<string name="btn_colors">Colori</string>
+	
+	<string name="action_settings">Impostazioni</string>
+	
+	<string name="label_red">Rosso</string>
+	<string name="label_green">Verde</string>
+	<string name="label_yellow">Giallo</string>
+	<string name="label_blue">Blu</string>
+	<string name="label_purple">Viola</string>
+	
+</resources>
